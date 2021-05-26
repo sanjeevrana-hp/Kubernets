@@ -1,0 +1,9 @@
+---
+plugin: gcp_compute
+projects:
+          - diamanti-314308
+auth_kind: serviceaccount
+service_account_file: /opt/ansible/inventory/service-account.json
+groups:
+          worker: "'worker' in name" 
+          master: "'server' in name"

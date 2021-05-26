@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ora-data
+  labels:
+    type: local
+  namespace: techmpoc01
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/database"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ora-data
+  namespace: techmpoc01
+spec:
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 50Gi
