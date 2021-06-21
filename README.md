@@ -14,6 +14,8 @@ gcp.yaml will call the inventory/service-account.json (same credentails.json) an
 
 Playbooks
 ----------
+
+cd /opt/ansible/
  - ansible-playbook master-Kubernet.yaml
  - ansible-playbook worker-Kubernet.yaml
  - ansible-playbook deployment.yaml # this will deploy the Oracle 12c database
