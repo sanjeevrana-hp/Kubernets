@@ -20,6 +20,7 @@ gcp.yaml will call the inventory/service-account.json (same credentails.json) an
 3. Create the YAML inventory file (gcp.yaml) and copy the below contents and please change the file according to your project and service account: 
 
 ---
+
 plugin: gcp_compute
 projects:
           - [your_gcp_project_id]
