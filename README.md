@@ -11,6 +11,7 @@ Command: terraform.exe apply --auto-approve
 Once the instance up use Ansibel playbooks 
 --------------------------------------------
 gcp.yaml will call the inventory/service-account.json (same credentails.json) and polpulate the dynamic inventory of GCP Cloud infrastructure.
+https://cloud.google.com/community/tutorials/managing-gcp-projects-with-terraform
 
 Playbooks
 ----------
