@@ -136,9 +136,8 @@ mkdir -p ~/.kube
 sudo cp -i /etc/kubernetes/admin.conf ~/.kube/config
 
 # Calico Networking
-curl https://docs.projectcalico.org/manifests/calico.yaml -O
-kubectl -f calico.yaml apply
-rm calico.yaml
+kubectl -f /var/tmp/calico.yaml apply
+
 
 echo
 echo "### COMMAND TO ADD A WORKER NODE ###"
