@@ -137,10 +137,10 @@ sudo cp -i /etc/kubernetes/admin.conf ~/.kube/config
 
 # workaround because https://github.com/weaveworks/weave/issues/3927
 # kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-curl -L https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n') -o weave.yaml
-sed -i 's/ghcr.io\/weaveworks\/launcher/docker.io\/weaveworks/g' weave.yaml
-kubectl -f weave.yaml apply
-rm weave.yaml
+# curl -L https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n') -o weave.yaml
+# sed -i 's/ghcr.io\/weaveworks\/launcher/docker.io\/weaveworks/g' weave.yaml
+# kubectl -f weave.yaml apply
+# rm weave.yaml
 
 apt-mark unhold kubelet kubeadm kubectl kubernetes-cni
 
